@@ -74,11 +74,43 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MiBD\Clinica.cs" />
-    <Compile Include="MiBD\Medico.cs" />
+    <Compile Include="MiBD\Asistente.cs" />
+    <Compile Include="MiBD\HelpMeAPP.cs" />
+    <Compile Include="MiBD\OrdenServicio.cs" />
+    <Compile Include="MiBD\Proveedor.cs" />
+    <Compile Include="MiBD\Servicio.cs" />
+    <Compile Include="MiBD\Usuario.cs" />
     <Compile Include="Migrations\201511131641426_Medico.cs" />
     <Compile Include="Migrations\201511131641426_Medico.Designer.cs">
       <DependentUpon>201511131641426_Medico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181548152_CambioTablas.cs" />
+    <Compile Include="Migrations\201511181548152_CambioTablas.Designer.cs">
+      <DependentUpon>201511181548152_CambioTablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181600111_CrearLLaves.cs" />
+    <Compile Include="Migrations\201511181600111_CrearLLaves.Designer.cs">
+      <DependentUpon>201511181600111_CrearLLaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181601244_CrearLLaves1.cs" />
+    <Compile Include="Migrations\201511181601244_CrearLLaves1.Designer.cs">
+      <DependentUpon>201511181601244_CrearLLaves1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181609104_CrearAsistente.cs" />
+    <Compile Include="Migrations\201511181609104_CrearAsistente.Designer.cs">
+      <DependentUpon>201511181609104_CrearAsistente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181701492_NuevaTablas.cs" />
+    <Compile Include="Migrations\201511181701492_NuevaTablas.Designer.cs">
+      <DependentUpon>201511181701492_NuevaTablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181703564_LLaveProveedorOrden.cs" />
+    <Compile Include="Migrations\201511181703564_LLaveProveedorOrden.Designer.cs">
+      <DependentUpon>201511181703564_LLaveProveedorOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181715180_regresoOrdenServicio.cs" />
+    <Compile Include="Migrations\201511181715180_regresoOrdenServicio.Designer.cs">
+      <DependentUpon>201511181715180_regresoOrdenServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -96,6 +128,27 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201511131641426_Medico.resx">
       <DependentUpon>201511131641426_Medico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181548152_CambioTablas.resx">
+      <DependentUpon>201511181548152_CambioTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181600111_CrearLLaves.resx">
+      <DependentUpon>201511181600111_CrearLLaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181601244_CrearLLaves1.resx">
+      <DependentUpon>201511181601244_CrearLLaves1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181609104_CrearAsistente.resx">
+      <DependentUpon>201511181609104_CrearAsistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181701492_NuevaTablas.resx">
+      <DependentUpon>201511181701492_NuevaTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181703564_LLaveProveedorOrden.resx">
+      <DependentUpon>201511181703564_LLaveProveedorOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181715180_regresoOrdenServicio.resx">
+      <DependentUpon>201511181715180_regresoOrdenServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

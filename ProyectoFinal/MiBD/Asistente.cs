@@ -7,12 +7,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProyectoFinal.MiBD
 {
-    public class Medico
+    public class Asistente
     {
         [Key]
-        public int cedula { get; set; }
+        public int idAsistente { get; set; }
         public string Nombre { get; set; }
-        
 
+        public virtual int ProveedoridProveedor { get; set; }
+        public virtual ICollection<OrdenServicio> Ordenes { get; set; }
+    
     }
 }
