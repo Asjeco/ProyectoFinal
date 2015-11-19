@@ -7,13 +7,13 @@ namespace ProyectoFinal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class regresoOrdenServicio : IMigrationMetadata
+    public sealed partial class NuevaModificacion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(regresoOrdenServicio));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NuevaModificacion));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511181715180_regresoOrdenServicio"; }
+            get { return "201511192001395_NuevaModificacion"; }
         }
         
         string IMigrationMetadata.Source

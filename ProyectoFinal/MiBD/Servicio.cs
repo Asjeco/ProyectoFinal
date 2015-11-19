@@ -12,11 +12,11 @@ namespace ProyectoFinal.MiBD
         [Key]
         public int idServicio { get; set; }
         public string Nombre { get; set; }
-        public double precio { get; set; }
-        public string Giro { get; set; }
+        public string Descripcion { get; set; }
+   
 
-        public virtual int ProveedoridProveedor { get; set; }
-
+   
+        public virtual ICollection<ProveedorServicio> ProveedorServicios { get; set; }
         public virtual ICollection<OrdenServicio> Ordenes { get; set; }
     }
 }

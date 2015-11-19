@@ -12,7 +12,7 @@ namespace ProyectoFinal.MiBD
         [Key]
         public int idUsuario { get; set; }
         public string Nombre { get; set; }
-        public string Direcc { get; set; }
+        public string Ubicacion { get; set; }
 
         public virtual ICollection<OrdenServicio> Ordenes { get; set; }
 

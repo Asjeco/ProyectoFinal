@@ -1,4 +1,5 @@
 ﻿using System;
+using ProyectoFinal.MiBD;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,31 +11,32 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProyectoFinal
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for IngresarUsuario.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class IngresarUsuario : Window
     {
-        public MainWindow()
+        public IngresarUsuario()
         {
             InitializeComponent();
         }
 
-        private void btnAltaProveedor_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            IngresoProveedor ventana = new IngresoProveedor();
-            ventana.Show();
-        }
+            HelpMeAPP db = new HelpMeAPP();
+            Usuario usu = new Usuario();
+            usu.Nombre = txtNombre.Text;
+            usu.Ubicacion = txtUbicacion.Text;
+           
+           
+            
 
-        private void btnUsuario_Click(object sender, RoutedEventArgs e)
-        {
-            IngresarUsuario ventana1 = new IngresarUsuario();
-            ventana1.Show();
+            db.Usuarios.Add(usu);
+            db.SaveChanges();
         }
     }
 }

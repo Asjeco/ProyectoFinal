@@ -60,6 +60,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="IngresarServicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngresarUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngresoProveedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +80,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="IngresarServicio.xaml.cs">
+      <DependentUpon>IngresarServicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarUsuario.xaml.cs">
+      <DependentUpon>IngresarUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoProveedor.xaml.cs">
+      <DependentUpon>IngresoProveedor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -75,9 +96,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MiBD\Asistente.cs" />
+    <Compile Include="MiBD\AsistentesProveedor.cs" />
     <Compile Include="MiBD\HelpMeAPP.cs" />
     <Compile Include="MiBD\OrdenServicio.cs" />
     <Compile Include="MiBD\Proveedor.cs" />
+    <Compile Include="MiBD\ProveedorServicio.cs" />
     <Compile Include="MiBD\Servicio.cs" />
     <Compile Include="MiBD\Usuario.cs" />
     <Compile Include="Migrations\201511131641426_Medico.cs" />
@@ -108,9 +131,29 @@
     <Compile Include="Migrations\201511181703564_LLaveProveedorOrden.Designer.cs">
       <DependentUpon>201511181703564_LLaveProveedorOrden.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511181715180_regresoOrdenServicio.cs" />
-    <Compile Include="Migrations\201511181715180_regresoOrdenServicio.Designer.cs">
-      <DependentUpon>201511181715180_regresoOrdenServicio.cs</DependentUpon>
+    <Compile Include="Migrations\201511191846466_LLavesServicio.cs" />
+    <Compile Include="Migrations\201511191846466_LLavesServicio.Designer.cs">
+      <DependentUpon>201511191846466_LLavesServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511191905360_LLavesAsistente.cs" />
+    <Compile Include="Migrations\201511191905360_LLavesAsistente.Designer.cs">
+      <DependentUpon>201511191905360_LLavesAsistente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511191906401_EliminarCampos.cs" />
+    <Compile Include="Migrations\201511191906401_EliminarCampos.Designer.cs">
+      <DependentUpon>201511191906401_EliminarCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511191912366_TablasUltimo.cs" />
+    <Compile Include="Migrations\201511191912366_TablasUltimo.Designer.cs">
+      <DependentUpon>201511191912366_TablasUltimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511192001395_NuevaModificacion.cs" />
+    <Compile Include="Migrations\201511192001395_NuevaModificacion.Designer.cs">
+      <DependentUpon>201511192001395_NuevaModificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511192007093_ModificacionDescripcion.cs" />
+    <Compile Include="Migrations\201511192007093_ModificacionDescripcion.Designer.cs">
+      <DependentUpon>201511192007093_ModificacionDescripcion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -147,8 +190,23 @@
     <EmbeddedResource Include="Migrations\201511181703564_LLaveProveedorOrden.resx">
       <DependentUpon>201511181703564_LLaveProveedorOrden.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511181715180_regresoOrdenServicio.resx">
-      <DependentUpon>201511181715180_regresoOrdenServicio.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511191846466_LLavesServicio.resx">
+      <DependentUpon>201511191846466_LLavesServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511191905360_LLavesAsistente.resx">
+      <DependentUpon>201511191905360_LLavesAsistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511191906401_EliminarCampos.resx">
+      <DependentUpon>201511191906401_EliminarCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511191912366_TablasUltimo.resx">
+      <DependentUpon>201511191912366_TablasUltimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511192001395_NuevaModificacion.resx">
+      <DependentUpon>201511192001395_NuevaModificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511192007093_ModificacionDescripcion.resx">
+      <DependentUpon>201511192007093_ModificacionDescripcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="ProyectoFinal.IngresoProveedor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="IngresoProveedor" Height="300" Width="356">
+    <Grid>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="132,227,0,0" VerticalAlignment="Top" Width="61" Height="22" Click="btnGuardar_Click"/>
+        <Label x:Name="lblNombre" Content="Nombre:" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDirrecion" Content="Direccion:" HorizontalAlignment="Left" Margin="30,44,0,0" VerticalAlignment="Top"/>
+        <Label Content="Giro:" HorizontalAlignment="Left" Margin="36,78,0,0" VerticalAlignment="Top"/>
+        <Label Content="Usuario:" HorizontalAlignment="Left" Margin="33,109,0,0" VerticalAlignment="Top"/>
+        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="30,145,0,0" VerticalAlignment="Top"/>
+        <Label Content="Edo Cuenta:" HorizontalAlignment="Left" Margin="36,182,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDirecc" HorizontalAlignment="Left" Height="23" Margin="132,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtGiro" HorizontalAlignment="Left" Height="23" Margin="132,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="132,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="132,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtContra" HorizontalAlignment="Left" Height="23" Margin="132,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbbEdoCuenta" HorizontalAlignment="Left" Margin="132,186,0,0" VerticalAlignment="Top" Width="120">
+            <ListBoxItem Content="Activo"/>
+            <ListBoxItem Content="Inactivo"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
