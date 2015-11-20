@@ -7,13 +7,13 @@ namespace ProyectoFinal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CrearLLaves1 : IMigrationMetadata
+    public sealed partial class CambioTotal : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CrearLLaves1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CambioTotal));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511181601244_CrearLLaves1"; }
+            get { return "201511201831239_CambioTotal"; }
         }
         
         string IMigrationMetadata.Source

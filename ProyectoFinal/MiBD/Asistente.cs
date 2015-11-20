@@ -14,8 +14,8 @@ namespace ProyectoFinal.MiBD
         public string Nombre { get; set; }
         public string telefono { get; set; }
        
-        public virtual ICollection<OrdenServicio> Ordenes { get; set; }
-        public virtual ICollection<AsistentesProveedor> AsistentesProveedor { get; set; }
+       // public virtual ICollection<OrdenServicio> Ordenes { get; set; }
+        public virtual int idProveedor { get; set; }
     
     }
 }

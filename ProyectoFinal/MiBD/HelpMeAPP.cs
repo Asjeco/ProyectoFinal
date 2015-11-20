@@ -15,7 +15,7 @@ namespace ProyectoFinal.MiBD
         public DbSet<Asistente> Asistentes { get; set; }
         public DbSet<OrdenServicio> Ordenes { get; set; }
         public DbSet<ProveedorServicio> ProveedorServicios { get; set; }
-        public DbSet<AsistentesProveedor> AsistenteProveedores { get; set; }
+       
     
 
     }

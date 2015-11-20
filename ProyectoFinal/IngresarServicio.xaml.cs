@@ -32,11 +32,28 @@ namespace ProyectoFinal
             ser.Nombre = txtNombre.Text;
             ser.Descripcion = txbDescripcion.Text;
 
+            ProveedorServicio proser = new ProveedorServicio();
+            object x = db.Servicios.ToList();
+
+           // proser.idServicio = x.;
+            proser.idProveedor = (int)cbbProveedor.SelectedValue;
 
 
-
-            db.Servicios.Add(usu);
+            db.Servicios.Add(ser);
             db.SaveChanges();
+        }
+
+        private void btnGuardar_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            cbbProveedor.ItemsSource = db.Proveedores.ToList();
+            cbbProveedor.DisplayMemberPath = "Nombre";
+            cbbProveedor.SelectedValuePath = "idProveedor";
         }
     }
 }

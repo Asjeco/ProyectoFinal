@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="IngresarUsuario" Height="325.1" Width="344.223">
     <Grid>
-        <Button Content="Guardar" HorizontalAlignment="Left" Margin="133,180,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="48,180,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Label Content="Nombre:" HorizontalAlignment="Left" Margin="29,72,0,0" VerticalAlignment="Top" Width="55"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="133,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.313,-0.323"/>
         <Label Content="Ubicacion:" HorizontalAlignment="Left" Margin="29,116,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtUbicacion" HorizontalAlignment="Left" Height="23" Margin="133,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnBorrar" Content="Borrar" HorizontalAlignment="Left" Margin="168,180,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

@@ -12,8 +12,8 @@ namespace ProyectoFinal.MiBD
         
         public int id { get; set; }
 
-        public virtual int ProveedoridProveedor { get; set; }
-        public virtual int ServicioidServicio { get; set; }
+        public virtual int idProveedor { get; set; }
+        public virtual int idServicio { get; set; }
 
     }
 }

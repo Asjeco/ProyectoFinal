@@ -36,13 +36,14 @@ namespace ProyectoFinal
                 {*/
                     HelpMeAPP db = new HelpMeAPP();
                     Proveedor pro = new Proveedor();
+                   // pro.idProveedor = (int)cbbDepartamentos.SelectedValue;
                     pro.Nombre = txtNombre.Text;
                     pro.Direcc = txtDirecc.Text;
-                    pro.Giro = txtGiro.Text;
+                    pro.Giro = cbbGiro.Text;
                     pro.Usuario = txtUsuario.Text;
                     pro.Contra = txtContra.Text;
                     if (cbbEdoCuenta.SelectedIndex == 0) {
-                        pro.edoCta = 1;
+                        //pro.edoCta = 1;
                     }else
                         if (cbbEdoCuenta.SelectedIndex == 1)
                         {
@@ -53,11 +54,68 @@ namespace ProyectoFinal
 
                     db.Proveedores.Add(pro);
                     db.SaveChanges();
+                    Window_Loaded_1(sender, e);
                /* }
                 else { MessageBox.Show("Solo numeros #sueldo"); }
             }
             else { MessageBox.Show("Solo letras #Nombre"); }   */
 
+        }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            int id = int.Parse(cbbId.Text);
+            var registros = from s in db.Proveedores
+                            where s.idProveedor == id
+                            select new
+                            {
+                                s.Nombre,
+                                s.Direcc,
+                                s.Giro,
+                                s.Usuario,
+                                s.Contra,
+                                s.edoCta
+                            };
+            dbGrid.ItemsSource = registros.ToList();
+        }
+
+        
+
+        private void btnBorra_Click(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            int id = int.Parse(cbbId.Text);
+            var pro = db.Proveedores
+                         .SingleOrDefault(x => x.idProveedor == id);
+
+            if (pro != null)
+            {
+                db.Proveedores.Remove(pro);
+                db.SaveChanges();
+
+            }
+        }
+
+        private void btnTodos_Click(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            var registros = from s in db.Proveedores
+                            select s;
+            dbGrid.ItemsSource = registros.ToList();
+        }
+
+        private void Grid_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            cbbId.ItemsSource = db.Proveedores.ToList();
+            cbbId.DisplayMemberPath = "idProveedor";
+            cbbId.SelectedValuePath = "idProveedor";
         }
     }
 }

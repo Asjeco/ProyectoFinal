@@ -36,5 +36,11 @@ namespace ProyectoFinal
             IngresarUsuario ventana1 = new IngresarUsuario();
             ventana1.Show();
         }
+
+        private void btnServicio_Click(object sender, RoutedEventArgs e)
+        {
+            IngresarServicio ventana2 = new IngresarServicio();
+            ventana2.Show();
+        }
     }
 }
