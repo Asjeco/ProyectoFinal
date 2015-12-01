@@ -1,14 +1,19 @@
 ﻿<Window x:Class="ProyectoFinal.IngresarUsuario"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="IngresarUsuario" Height="325.1" Width="344.223">
+        Title="IngresarUsuario" Height="325.1" Width="512.223">
     <Grid>
-        <Button Content="Guardar" HorizontalAlignment="Left" Margin="48,180,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="29,72,0,0" VerticalAlignment="Top" Width="55"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="133,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.313,-0.323"/>
-        <Label Content="Ubicacion:" HorizontalAlignment="Left" Margin="29,116,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtUbicacion" HorizontalAlignment="Left" Height="23" Margin="133,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnBorrar" Content="Borrar" HorizontalAlignment="Left" Margin="168,180,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="319,65,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="29,37,0,0" VerticalAlignment="Top" Width="55"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="133,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.313,-0.323"/>
+        <Label Content="Ubicacion:" HorizontalAlignment="Left" Margin="29,75,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUbicacion" HorizontalAlignment="Left" Height="23" Margin="133,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnBorrar" Content="Borrar" HorizontalAlignment="Left" Margin="407,122,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="dbGrid" HorizontalAlignment="Left" Margin="46,156,0,0" VerticalAlignment="Top" Height="128" Width="397"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="114,122,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="319,122,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox HorizontalAlignment="Left" Margin="25,122,0,0" VerticalAlignment="Top" Width="69"/>
+        <Button x:Name="btnVerTodos" Content="Ver Todos" HorizontalAlignment="Left" Margin="222,122,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.107,0.55" Click="btnVerTodos_Click"/>
 
     </Grid>
 </Window>

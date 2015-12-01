@@ -27,6 +27,13 @@ namespace ProyectoFinal
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
+            //instanciar bd
+
+            /*  if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
+              {
+                  if (Regex.IsMatch(txtSueldo.Text, @"\d+$"))
+                  {*/
             HelpMeAPP db = new HelpMeAPP();
             Usuario usu = new Usuario();
             usu.Nombre = txtNombre.Text;
@@ -37,6 +44,19 @@ namespace ProyectoFinal
 
             db.Usuarios.Add(usu);
             db.SaveChanges();
+
+            /* }
+                else { MessageBox.Show("Solo numeros #sueldo"); }
+            }
+            else { MessageBox.Show("Solo letras #Nombre"); }   */
+        }
+
+        private void btnVerTodos_Click(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            var registros = from s in db.Usuarios
+                            select s;
+            dbGrid.ItemsSource = registros.ToList();
         }
     }
 }
