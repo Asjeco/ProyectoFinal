@@ -43,7 +43,7 @@ namespace ProyectoFinal
                     pro.Usuario = txtUsuario.Text;
                     pro.Contra = txtContra.Text;
                     if (cbbEdoCuenta.SelectedIndex == 0) {
-                        //pro.edoCta = 1;
+                        pro.edoCta = 1;
                     }else
                         if (cbbEdoCuenta.SelectedIndex == 1)
                         {

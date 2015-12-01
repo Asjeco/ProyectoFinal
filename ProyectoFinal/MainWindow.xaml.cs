@@ -39,8 +39,7 @@ namespace ProyectoFinal
 
         private void btnServicio_Click(object sender, RoutedEventArgs e)
         {
-            IngresarServicio ventana2 = new IngresarServicio();
-            ventana2.Show();
+            
         }
     }
 }

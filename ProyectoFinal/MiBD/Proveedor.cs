@@ -19,7 +19,7 @@ namespace ProyectoFinal.MiBD
         public byte edoCta { get; set; }
 
 
-        public virtual ICollection<ProveedorServicio> ProveedorServicios { get; set; }
+       
         public virtual ICollection<Asistente> Asistentes { get; set; }
         public virtual ICollection<OrdenServicio> Ordenes { get; set; }
 
