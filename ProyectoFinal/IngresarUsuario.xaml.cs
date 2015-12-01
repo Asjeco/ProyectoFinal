@@ -44,6 +44,7 @@ namespace ProyectoFinal
 
             db.Usuarios.Add(usu);
             db.SaveChanges();
+            Window_Loaded_1(sender, e);
 
             /* }
                 else { MessageBox.Show("Solo numeros #sueldo"); }
@@ -57,6 +58,44 @@ namespace ProyectoFinal
             var registros = from s in db.Usuarios
                             select s;
             dbGrid.ItemsSource = registros.ToList();
+        }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            int id = int.Parse(cbbID.Text);
+            var registros = from s in db.Usuarios
+                            where s.idUsuario == id
+                            select new
+                            {
+                                s.Nombre,
+                                s.Ubicacion
+                                
+                            };
+            dbGrid.ItemsSource = registros.ToList();
+        }
+
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            cbbID.ItemsSource = db.Usuarios.ToList();
+            cbbID.DisplayMemberPath = "idUsuario";
+            cbbID.SelectedValuePath = "idUsuario";
+        }
+
+        private void btnBorrar_Click(object sender, RoutedEventArgs e)
+        {
+            HelpMeAPP db = new HelpMeAPP();
+            int id = int.Parse(cbbID.Text);
+            var usu = db.Usuarios
+                         .SingleOrDefault(x => x.idUsuario == id);
+
+            if (usu != null)
+            {
+                db.Usuarios.Remove(usu);
+                db.SaveChanges();
+
+            }
         }
     }
 }

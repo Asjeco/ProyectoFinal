@@ -55,6 +55,8 @@ namespace ProyectoFinal
                     db.Proveedores.Add(pro);
                     db.SaveChanges();
                     Window_Loaded_1(sender, e);
+                   
+                   
                /* }
                 else { MessageBox.Show("Solo numeros #sueldo"); }
             }

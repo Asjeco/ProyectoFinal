@@ -1,0 +1,8 @@
+﻿<Window x:Class="ProyectoFinal.OrdenesServicios"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OrdenesServicios" Height="350.199" Width="533.067">
+    <Grid>
+        
+    </Grid>
+</Window>

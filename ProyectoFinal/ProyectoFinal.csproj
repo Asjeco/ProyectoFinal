@@ -60,6 +60,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="IngresarAsistente.xaml.cs">
+      <DependentUpon>IngresarAsistente.xaml</DependentUpon>
+    </Compile>
     <Page Include="IngresarUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +89,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="IngresarAsistente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrdenesServicios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MiBD\Asistente.cs" />
@@ -101,7 +112,14 @@
     <Compile Include="Migrations\201512011700584_EliminarServicio.Designer.cs">
       <DependentUpon>201512011700584_EliminarServicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512012259374_OrdenServicios.cs" />
+    <Compile Include="Migrations\201512012259374_OrdenServicios.Designer.cs">
+      <DependentUpon>201512012259374_OrdenServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="OrdenesServicios.xaml.cs">
+      <DependentUpon>OrdenesServicios.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -120,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512011700584_EliminarServicio.resx">
       <DependentUpon>201512011700584_EliminarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512012259374_OrdenServicios.resx">
+      <DependentUpon>201512012259374_OrdenServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -37,9 +37,16 @@ namespace ProyectoFinal
             ventana1.Show();
         }
 
-        private void btnServicio_Click(object sender, RoutedEventArgs e)
+        private void btnAsistente_Click(object sender, RoutedEventArgs e)
         {
+
             
+            IngresarAsistente ventana2 = new IngresarAsistente();
+            ventana2.Show();
         }
+
+        
+
+        
     }
 }
