@@ -30,7 +30,7 @@ namespace ProyectoFinal
             //If a product code is not empty we search the database
            // if (Regex.IsMatch(TxtProdCode.Text.Trim(), @"^\d+$"))
            // {
-            HelpMeAPP db = new HelpMeAPP();
+        /*    HelpMeAPP db = new HelpMeAPP();
                 //parse the product code as int from the TextBox
                 int id = int.Parse(TxtProdCode.Text);
                 //We query the database for the product
@@ -46,7 +46,7 @@ namespace ProyectoFinal
                 {
                     //if product was not found we display a user notification window
                     MessageBox.Show("Product not found. (Only numbers allowed)", "Product code error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                }
+                }*/
             //}
         }
     }

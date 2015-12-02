@@ -12,6 +12,7 @@ namespace ProyectoFinal.MiBD
         public DbSet<Usuario> Usuarios { get; set; } //<clase> (tablas)
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Asistente> Asistentes { get; set; }
+        public DbSet<Servicio> Servicios { get; set; }
         public DbSet<OrdenServicio> Ordenes { get; set; }
       
        

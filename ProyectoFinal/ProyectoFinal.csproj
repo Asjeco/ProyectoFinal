@@ -63,6 +63,13 @@
     <Compile Include="IngresarAsistente.xaml.cs">
       <DependentUpon>IngresarAsistente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512020055129_AgregarDatosServicios.cs" />
+    <Compile Include="Migrations\201512020055129_AgregarDatosServicios.Designer.cs">
+      <DependentUpon>201512020055129_AgregarDatosServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios.xaml.cs">
+      <DependentUpon>Servicios.xaml</DependentUpon>
+    </Compile>
     <Page Include="IngresarUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,12 +104,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Servicios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MiBD\Asistente.cs" />
     <Compile Include="MiBD\HelpMeAPP.cs" />
     <Compile Include="MiBD\OrdenServicio.cs" />
     <Compile Include="MiBD\Proveedor.cs" />
+    <Compile Include="MiBD\Servicio.cs" />
     <Compile Include="MiBD\Usuario.cs" />
     <Compile Include="Migrations\201511201831239_CambioTotal.cs" />
     <Compile Include="Migrations\201511201831239_CambioTotal.Designer.cs">
@@ -119,6 +131,14 @@
     <Compile Include="Migrations\201512012345346_NuevoTipoDato.cs" />
     <Compile Include="Migrations\201512012345346_NuevoTipoDato.Designer.cs">
       <DependentUpon>201512012345346_NuevoTipoDato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512020037530_CambioTablas.cs" />
+    <Compile Include="Migrations\201512020037530_CambioTablas.Designer.cs">
+      <DependentUpon>201512020037530_CambioTablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512020040318_CambioTablas2.cs" />
+    <Compile Include="Migrations\201512020040318_CambioTablas2.Designer.cs">
+      <DependentUpon>201512020040318_CambioTablas2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrdenesServicios.xaml.cs">
@@ -148,6 +168,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512012345346_NuevoTipoDato.resx">
       <DependentUpon>201512012345346_NuevoTipoDato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512020037530_CambioTablas.resx">
+      <DependentUpon>201512020037530_CambioTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512020040318_CambioTablas2.resx">
+      <DependentUpon>201512020040318_CambioTablas2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512020055129_AgregarDatosServicios.resx">
+      <DependentUpon>201512020055129_AgregarDatosServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -39,7 +39,7 @@ namespace ProyectoFinal
                    // pro.idProveedor = (int)cbbDepartamentos.SelectedValue;
                     pro.Nombre = txtNombre.Text;
                     pro.Direcc = txtDirecc.Text;
-                    pro.Giro = cbbGiro.Text;
+                    //pro.Giro = cbbGiro.Text;
                     pro.Usuario = txtUsuario.Text;
                     pro.Contra = txtContra.Text;
                     if (cbbEdoCuenta.SelectedIndex == 0) {
@@ -74,7 +74,7 @@ namespace ProyectoFinal
                             {
                                 s.Nombre,
                                 s.Direcc,
-                                s.Giro,
+                               
                                 s.Usuario,
                                 s.Contra,
                                 s.edoCta

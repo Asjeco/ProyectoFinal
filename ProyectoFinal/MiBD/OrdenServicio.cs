@@ -16,12 +16,12 @@ namespace ProyectoFinal.MiBD
         public DateTime fecha { get; set; }
         public string hora { get; set; }
         public string edoOrden { get; set; }
-        public string Asistente { get; set; }
+       // public string Asistente { get; set; }
 
         public virtual int idProveedor { get; set; }
         public virtual int idUsuario { get; set; }
 
-        public virtual List<Proveedor> ServicioList { get; set; } 
+        public virtual List<Servicio> ListaServicios { get; set; } 
         
 
     }

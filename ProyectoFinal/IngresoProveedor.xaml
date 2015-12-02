@@ -10,15 +10,14 @@
         <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="204,136,0,0" VerticalAlignment="Top" Width="61" Height="22" Click="btnGuardar_Click" Grid.Column="1"/>
         <Label x:Name="lblNombre" Content="Nombre:" HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblDirrecion" Content="Direccion:" HorizontalAlignment="Left" Margin="12,44,0,0" VerticalAlignment="Top"/>
-        <Label Content="Giro:" HorizontalAlignment="Left" Margin="33,82,0,0" VerticalAlignment="Top"/>
         <Label Content="Usuario:" HorizontalAlignment="Left" Margin="151,9,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="148,45,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label Content="Edo Cuenta:" HorizontalAlignment="Left" Margin="154,82,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Edo Cuenta:" HorizontalAlignment="Left" Margin="18,82,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtDirecc" HorizontalAlignment="Left" Height="23" Margin="12,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="12,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="250,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="txtContra" HorizontalAlignment="Left" Height="23" Margin="250,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <ComboBox x:Name="cbbEdoCuenta" HorizontalAlignment="Left" Margin="250,86,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1">
+        <ComboBox x:Name="cbbEdoCuenta" HorizontalAlignment="Left" Margin="12,86,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1">
             <ListBoxItem Content="Activo"/>
             <ListBoxItem Content="Inactivo"/>
         </ComboBox>
@@ -27,14 +26,6 @@
         <Button x:Name="btnBorra" Content="Borra" HorizontalAlignment="Left" Margin="285,136,0,0" VerticalAlignment="Top" Width="75" Click="btnBorra_Click" Grid.Column="1"/>
         <DataGrid x:Name="dbGrid" Margin="18,174,10,0" VerticalAlignment="Top" Height="132" Grid.ColumnSpan="2"/>
         <Button x:Name="btnTodos" Content="Ver Todos" HorizontalAlignment="Left" Margin="100,136,0,0" VerticalAlignment="Top" Width="75" Click="btnTodos_Click" Grid.Column="1"/>
-        <ComboBox x:Name="cbbGiro" HorizontalAlignment="Left" Margin="12,82,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1">
-            <ListBoxItem Content="Electrico"/>
-            <ListBoxItem Content="Venta refacciones"/>
-            <ListBoxItem Content="Auto Lavado"/>
-            <ListBoxItem Content="Venta de Pisos"/>
-            <ListBoxItem Content="Mcanico"/>
-            <ListBoxItem Content="Venta Pintura"/>
-        </ComboBox>
         <ComboBox x:Name="cbbId" HorizontalAlignment="Left" Margin="18,136,0,0" VerticalAlignment="Top" Width="50"/>
 
     </Grid>

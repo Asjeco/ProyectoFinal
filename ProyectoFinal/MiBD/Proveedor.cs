@@ -13,7 +13,6 @@ namespace ProyectoFinal.MiBD
         public int idProveedor { get; set; }
         public string Nombre { get; set; }
         public string Direcc { get; set; }
-        public string Giro { get; set; }
         public string Usuario { get; set; }
         public string Contra { get; set; }
         public byte edoCta { get; set; }
@@ -23,6 +22,6 @@ namespace ProyectoFinal.MiBD
         public virtual ICollection<Asistente> Asistentes { get; set; }
         public virtual ICollection<OrdenServicio> Ordenes { get; set; }
 
-        public virtual List<OrdenServicio> ProveedorList { get; set; } 
+      //  public virtual List<OrdenServicio> ProveedorList { get; set; } 
     }
 }
