@@ -45,6 +45,12 @@ namespace ProyectoFinal
             ventana2.Show();
         }
 
+        private void btnOrdenServicio_Click(object sender, RoutedEventArgs e)
+        {
+            OrdenesServicios ventana3 = new OrdenesServicios();
+            ventana3.Show();
+        }
+
         
 
         

@@ -67,6 +67,14 @@
     <Compile Include="Migrations\201512020055129_AgregarDatosServicios.Designer.cs">
       <DependentUpon>201512020055129_AgregarDatosServicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512020159005_AgregarTotal.cs" />
+    <Compile Include="Migrations\201512020159005_AgregarTotal.Designer.cs">
+      <DependentUpon>201512020159005_AgregarTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512020241229_NuevasVirtualID.cs" />
+    <Compile Include="Migrations\201512020241229_NuevasVirtualID.Designer.cs">
+      <DependentUpon>201512020241229_NuevasVirtualID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Servicios.xaml.cs">
       <DependentUpon>Servicios.xaml</DependentUpon>
     </Compile>
@@ -177,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512020055129_AgregarDatosServicios.resx">
       <DependentUpon>201512020055129_AgregarDatosServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512020159005_AgregarTotal.resx">
+      <DependentUpon>201512020159005_AgregarTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512020241229_NuevasVirtualID.resx">
+      <DependentUpon>201512020241229_NuevasVirtualID.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
