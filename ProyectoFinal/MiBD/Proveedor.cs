@@ -23,6 +23,6 @@ namespace ProyectoFinal.MiBD
         public virtual ICollection<Asistente> Asistentes { get; set; }
         public virtual ICollection<OrdenServicio> Ordenes { get; set; }
 
-        
+        public virtual List<OrdenServicio> ProveedorList { get; set; } 
     }
 }

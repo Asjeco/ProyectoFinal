@@ -13,7 +13,7 @@ namespace ProyectoFinal.MiBD
         public int idOrden { get; set; }
         public double precioEstimado { get; set; }
         public double iva { get; set; }
-        public string fecha { get; set; }
+        public DateTime fecha { get; set; }
         public string hora { get; set; }
         public string edoOrden { get; set; }
         public string Asistente { get; set; }
@@ -21,7 +21,7 @@ namespace ProyectoFinal.MiBD
         public virtual int idProveedor { get; set; }
         public virtual int idUsuario { get; set; }
 
-    
+        public virtual List<Proveedor> ServicioList { get; set; } 
         
 
     }

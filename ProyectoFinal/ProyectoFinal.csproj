@@ -116,6 +116,10 @@
     <Compile Include="Migrations\201512012259374_OrdenServicios.Designer.cs">
       <DependentUpon>201512012259374_OrdenServicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512012345346_NuevoTipoDato.cs" />
+    <Compile Include="Migrations\201512012345346_NuevoTipoDato.Designer.cs">
+      <DependentUpon>201512012345346_NuevoTipoDato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrdenesServicios.xaml.cs">
       <DependentUpon>OrdenesServicios.xaml</DependentUpon>
@@ -141,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512012259374_OrdenServicios.resx">
       <DependentUpon>201512012259374_OrdenServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512012345346_NuevoTipoDato.resx">
+      <DependentUpon>201512012345346_NuevoTipoDato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
