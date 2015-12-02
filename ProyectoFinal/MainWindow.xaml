@@ -7,6 +7,7 @@
         <Button x:Name="btnUsuario" Content="Registro Usuario" HorizontalAlignment="Left" Margin="328,63,0,0" VerticalAlignment="Top" Width="108" Click="btnUsuario_Click"/>
         <Button x:Name="btnAsistente" Content="Registro Asistente" HorizontalAlignment="Left" Margin="119,118,0,0" VerticalAlignment="Top" Width="108" Click="btnAsistente_Click"/>
         <Button x:Name="btnOrdenServicio" Content="Orden de Servicio" HorizontalAlignment="Left" Margin="328,118,0,0" VerticalAlignment="Top" Width="108" Click="btnOrdenServicio_Click"/>
+        <Button Content="Registro Servicio" HorizontalAlignment="Left" Margin="214,188,0,0" VerticalAlignment="Top" Width="102" Height="27" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

@@ -39,7 +39,7 @@ namespace ProyectoFinal
                 //We query the database for the product
                 Servicio p = db.Servicios.SingleOrDefault(x => x.idServicio == id);
 
-              
+                ServiciosNuevos.RemoveAll(s => s.idServicio == p.idServicio);
                 ServiciosNuevos.Add(new Servicio()
                 {
                     idServicio = p.idServicio,

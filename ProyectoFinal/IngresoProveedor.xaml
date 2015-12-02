@@ -27,6 +27,7 @@
         <DataGrid x:Name="dbGrid" Margin="18,174,10,0" VerticalAlignment="Top" Height="132" Grid.ColumnSpan="2"/>
         <Button x:Name="btnTodos" Content="Ver Todos" HorizontalAlignment="Left" Margin="100,136,0,0" VerticalAlignment="Top" Width="75" Click="btnTodos_Click" Grid.Column="1"/>
         <ComboBox x:Name="cbbId" HorizontalAlignment="Left" Margin="18,136,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="btnModificar" Content="Modificar" Grid.Column="1" HorizontalAlignment="Left" Margin="285,88,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

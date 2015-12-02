@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace ProyectoFinal
 {
@@ -29,26 +30,30 @@ namespace ProyectoFinal
         {
             //instanciar bd
 
-            /*  if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
+             if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
               {
-                  if (Regex.IsMatch(txtSueldo.Text, @"\d+$"))
-                  {*/
+                  if (Regex.IsMatch(txtTele.Text, @"\d+$"))
+                  {
+                      if (cbbProveedor.SelectedIndex > -1)
+                    {
             HelpMeAPP db = new HelpMeAPP();
             Asistente asis = new Asistente();
             asis.idProveedor = (int)cbbProveedor.SelectedValue;
             asis.Nombre = txtNombre.Text;
             asis.telefono = txtTele.Text;
            
-            // pro.edoCta = Byte.Parse(txtEdoCuenta.Text);
-            //   emp.DepartamentoId = (int)cbbDepartamentos.SelectedValue;
+       
 
             db.Asistentes.Add(asis);
             db.SaveChanges();
             Window_Loaded_1(sender, e);
-            /* }
-             else { MessageBox.Show("Solo numeros #sueldo"); }
+
+                    }
+                      else { MessageBox.Show("Elige un Proveedor"); }
+             }
+             else { MessageBox.Show("Solo numeros #Telefono"); }
          }
-         else { MessageBox.Show("Solo letras #Nombre"); }   */
+         else { MessageBox.Show("Solo letras #Nombre"); }   
         }
 
         private void Grid_Loaded_1(object sender, RoutedEventArgs e)

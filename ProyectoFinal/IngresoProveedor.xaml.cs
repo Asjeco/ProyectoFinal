@@ -30,37 +30,49 @@ namespace ProyectoFinal
         {
             //instanciar bd
 
-          /*  if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
+            if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
             {
-                if (Regex.IsMatch(txtSueldo.Text, @"\d+$"))
-                {*/
-                    HelpMeAPP db = new HelpMeAPP();
-                    Proveedor pro = new Proveedor();
-                   // pro.idProveedor = (int)cbbDepartamentos.SelectedValue;
-                    pro.Nombre = txtNombre.Text;
-                    pro.Direcc = txtDirecc.Text;
-                    //pro.Giro = cbbGiro.Text;
-                    pro.Usuario = txtUsuario.Text;
-                    pro.Contra = txtContra.Text;
-                    if (cbbEdoCuenta.SelectedIndex == 0) {
-                        pro.edoCta = 1;
-                    }else
-                        if (cbbEdoCuenta.SelectedIndex == 1)
-                        {
-                            pro.edoCta = 0;
-                        }
-                   // pro.edoCta = Byte.Parse(txtEdoCuenta.Text);
-                 //   emp.DepartamentoId = (int)cbbDepartamentos.SelectedValue;
+                if (Regex.IsMatch(txtDirecc.Text, @"^[a-zA-Z]+\d+$"))
+                {
+                   // if (Regex.IsMatch(txtUsuario.Text, @"^[a-zA-Z]+$"))
+                  //  {
+                   // if (Regex.IsMatch(txtContra.Text, @"^[a-zA-Z]+$"))
+                  //  {
+                    if (cbbEdoCuenta.SelectedIndex > -1)
+                    {
+                        HelpMeAPP db = new HelpMeAPP();
+                        Proveedor pro = new Proveedor();
 
-                    db.Proveedores.Add(pro);
-                    db.SaveChanges();
-                    Window_Loaded_1(sender, e);
+                        pro.Nombre = txtNombre.Text;
+                        pro.Direcc = txtDirecc.Text;
+                        //pro.Giro = cbbGiro.Text;
+                        pro.Usuario = txtUsuario.Text;
+                        pro.Contra = txtContra.Text;
+                        if (cbbEdoCuenta.SelectedIndex == 0)
+                        {
+                            pro.edoCta = 1;
+                        }
+                        else
+                            if (cbbEdoCuenta.SelectedIndex == 1)
+                            {
+                                pro.edoCta = 0;
+                            }
+
+
+                        db.Proveedores.Add(pro);
+                        db.SaveChanges();
+                        Window_Loaded_1(sender, e);
+                        //  }-+
+                        // else { MessageBox.Show("Solo numeros #sueldo"); } 
+                        //  }
+                        // else { MessageBox.Show("Solo numeros #sueldo"); } 
+                    }
+                    else { MessageBox.Show("Elige un estado de la cuenta #Edo. Cuenta"); }
                    
-                   
-               /* }
-                else { MessageBox.Show("Solo numeros #sueldo"); }
+                }
+                else { MessageBox.Show("Solo letras #Direccion"); }
             }
-            else { MessageBox.Show("Solo letras #Nombre"); }   */
+            else { MessageBox.Show("Solo letras #Nombre"); }   
 
         }
 

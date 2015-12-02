@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace ProyectoFinal
 {
@@ -30,10 +31,10 @@ namespace ProyectoFinal
 
             //instanciar bd
 
-            /*  if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
+              if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
               {
-                  if (Regex.IsMatch(txtSueldo.Text, @"\d+$"))
-                  {*/
+                  if (Regex.IsMatch(txtUbicacion.Text, @"^[a-zA-Z]+\d+$"))
+                  {
             HelpMeAPP db = new HelpMeAPP();
             Usuario usu = new Usuario();
             usu.Nombre = txtNombre.Text;
@@ -46,10 +47,10 @@ namespace ProyectoFinal
             db.SaveChanges();
             Window_Loaded_1(sender, e);
 
-            /* }
-                else { MessageBox.Show("Solo numeros #sueldo"); }
+             }
+                else { MessageBox.Show("Ingresar #Ubicacion"); }
             }
-            else { MessageBox.Show("Solo letras #Nombre"); }   */
+            else { MessageBox.Show("Solo letras #Nombre"); }   
         }
 
         private void btnVerTodos_Click(object sender, RoutedEventArgs e)
