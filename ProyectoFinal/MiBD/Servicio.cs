@@ -16,7 +16,6 @@ namespace ProyectoFinal.MiBD
         public double precio { get; set; }
 
         public virtual List<OrdenServicio> ListaOrdenes { get; set; } 
-       // public virtual ICollection<ProveedorServicio> ProveedorServicios { get; set; }
-        //public virtual ICollection<OrdenServicio> Ordenes { get; set; }
+       
     }
 }

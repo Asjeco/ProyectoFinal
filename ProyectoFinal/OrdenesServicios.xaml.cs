@@ -39,8 +39,7 @@ namespace ProyectoFinal
                 //We query the database for the product
                 Servicio p = db.Servicios.SingleOrDefault(x => x.idServicio == id);
 
-               // ServiciosNuevos.RemoveAll(s => s.Id == tmpProduct.Id);
-                //we add the product to the Cart
+              
                 ServiciosNuevos.Add(new Servicio()
                 {
                     idServicio = p.idServicio,
@@ -63,9 +62,9 @@ namespace ProyectoFinal
                                 s.idServicio,
                                 s.Nombre,
                                 s.Descripcion,
-                                //s.Qty,
+                               
                                 s.precio
-                               // SubTotal = s.Qty * s.Price
+                              
                             };
 
             //refresh dataGridview-----------
@@ -97,34 +96,40 @@ namespace ProyectoFinal
 
         private void btnGenerar_Click(object sender, RoutedEventArgs e)
         {
-            //we make sure there is at least one item in the cart and a sales person has been selected
+           
             if (ServiciosNuevos.Count > 0 && cbbProveedor.SelectedIndex > -1 && cbbCliente.SelectedIndex > -1)
             {
-                //auto dispose after no longer in scope
+           
                 using (HelpMeAPP db = new HelpMeAPP())
                 {
-                    //All database transactions are considered 1 unit of work
+                    
                     using (var dbTransaction = db.Database.BeginTransaction())
                     {
                         try
                         {
-                            //we create the invoice object
+                            
                             OrdenServicio orden = new OrdenServicio();
                             orden.fecha = DateTime.Now;
-                            //assign sales person by querying the database using the Combobox selection
+                         
                             orden.Proveedor = db.Proveedores.SingleOrDefault(s => s.idProveedor == (int)cbbProveedor.SelectedValue);
+                            orden.Usuario = db.Usuarios.SingleOrDefault(s => s.idUsuario == (int)cbbCliente.SelectedValue);
+
+                          
+                            foreach (var ser in ServiciosNuevos)
+                            {
+                                
+                                Servicio p = db.Servicios.SingleOrDefault(i => i.idServicio == ser.idServicio);
+                                orden.ListaServicios.Add(p);
+
+                            }
 
                            
-
-                            //we add the generated invoice to the Invoice Entity (Table)
                             db.Ordenes.Add(orden);
                             //Save Changed to the database
                             db.SaveChanges();
                             //Make the changes permanent 
                             dbTransaction.Commit();
-                            //We restore the form with defaults
-                           // CleanUp();
-                            //Show confirmation message to the user
+                            
                             MessageBox.Show(string.Format("Transaction #{0}  Saved", orden.idOrden), "Success", MessageBoxButton.OK,
                                 MessageBoxImage.Information);
                         }
